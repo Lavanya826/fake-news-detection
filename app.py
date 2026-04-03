@@ -1,11 +1,12 @@
 import streamlit as st
 import pickle
 import re
+import joblib
 from PIL import Image
 
 # Load model
-model = pickle.load(open("model.pkl", "rb"))
-vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
+model = joblib.load("model.pkl")
+vectorizer = joblib.load("vectorizer.pkl")
 
 # Page config
 st.set_page_config(
